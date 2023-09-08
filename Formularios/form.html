@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <script>
+        function mostrardatos() {
+            vnombre = document.getElementById("nombre").value;
+            vapellido = document.getElementById("apellido").value;
+            vdni = document.getElementById("dni").value;
+            vfecha_nacimiento = document.getElementById("fecha_nacimiento").value;
+            vdomicilio = document.getElementById("domicilio").value;
+            vlocalidad = document.getElementById("localidad").value;
+            vrange0=document.getElementById("range0").value;
+            vrange1=document.getElementById("range1").value;
+            vrange2=document.getElementById("range2").value;
+            vrange3=document.getElementById("range3").value;
+            vopcion0=document.getElementById("español");
+            vopcion1=document.getElementById("ingles");
+            vopcion2=document.getElementById("frances");
+            vopcion3=document.getElementById("chino");
+            var i =0;
+            document.write("LOS DATOS INGRESADOS FUERON: <br/>");
+            document.write("Nombre: "+vnombre+"<br/>");
+			document.write("Apellido: "+vapellido+"<br/>");
+            document.write("D.N.I: "+vdni+"<br/>");
+            document.write("Fecha de nacimiento: "+vfecha_nacimiento+"<br/>");
+            document.write("Domicilio: "+vdomicilio+"<br/>");
+            document.write("Localidad: "+vlocalidad+"<br/>");
+
+            if (vopcion0.checked){
+                document.write("Nivel de Español: "+vrange0+"<br/>");
+            }
+
+            if (vopcion1.checked){
+                document.write("Nivel de Ingles: "+vrange1+"<br/>");
+            }
+
+            if (vopcion2.checked){
+                document.write("Nivel de Frances: "+vrange2+"<br/>");
+            }
+
+            if (vopcion3.checked){
+                document.write("Nivel de Chino: "+vrange3+"<br/>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido</h1>
+    </header>
+        <form action="" method="">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre"><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido"><br>
+            <label for="dni">D.N.I:</label>
+            <input type="number" id="dni" placeholder="Ingrese su D.N.I"><br>
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" ><br>
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio" placeholder="Ingrese su Domicilio"><br>
+            <label for="localidad">Localidad:</label>
+            <input type="text" id="localidad" placeholder="Ingrese su localidad"><br>
+
+            <p>IDIOMAS QUE CONOCE</p>
+            <input type="checkbox" id="español"><label for="español">Español</label>
+            <input type="range" max="100" id="range0"><br>
+
+            <br>
+            <input type="checkbox" id="ingles"><label for="ingles">Ingles</label>
+            <input type="range" max="100" id="range1"><br>
+            <br>
+            <input type="checkbox" id="frances"><label for="frances">Frances</label>
+            <input type="range" max="100" id="range2"><br>
+            <br>
+            <input type="checkbox" id="chino"><label for="chino">Chino</label>
+            <input type="range" max="100" id="range3"><br>
+            <br>
+
+            <button type="submit" onclick="mostrardatos()">Enviar</button>
+            <button type="reset">Borrar</button>
+        </form>
+</body>
+</html>
